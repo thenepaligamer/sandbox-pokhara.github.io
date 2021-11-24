@@ -4,17 +4,22 @@ import cx from "classnames";
 import styles from "./Navbar.module.css";
 import useWindowDimensions from "../custom_hooks/useWindowDimensions";
 import "./Custom.css";
+import { Link, NavLink, useHistory } from "react-router-dom";
 
 function Navbar() {
   const buttonRef = useRef(null);
+  const logoRef = useRef(null);
+  const history = useHistory();
   const [isOpen, setIsOpen] = useState(false);
   const { width } = useWindowDimensions();
 
   const toggleNav = () => {
     if (isOpen) {
       buttonRef.current.classList.remove("open");
+      logoRef.current.style.visibility = "visible";
     } else {
       buttonRef.current.classList.add("open");
+      logoRef.current.style.visibility = "hidden";
     }
     setIsOpen((prev) => !prev);
   };
@@ -22,7 +27,8 @@ function Navbar() {
   useEffect(() => {
     if (width > 935) {
       buttonRef.current.classList.remove("open");
-      // buttonRef.current.classList.add("notransition");
+      logoRef.current.style.visibility = "visible";
+      buttonRef.current.classList.add("notransition");
       setIsOpen(false);
     }
   }, [width]);
@@ -32,9 +38,13 @@ function Navbar() {
       <header className={styles.header}>
         <div className={styles.headerContent}>
           <div className={styles.logoContainer}>
-            <a className={styles.logoLink} href="/">
-              <img src={Logo} style={{ width: "100px", height: "30px" }} />
-            </a>
+            <Link className={styles.logoLink} to="/">
+              <img
+                src={Logo}
+                style={{ width: "100px", height: "30px" }}
+                ref={logoRef}
+              />
+            </Link>
           </div>
           <div
             className="menuBtn"
@@ -50,24 +60,24 @@ function Navbar() {
           >
             <ul className={styles.navList}>
               <li className={styles.navItem}>
-                <a href="/" className={styles.navLink}>
+                <Link to="/" className={styles.navLink}>
                   Home
-                </a>
+                </Link>
               </li>
               <li className={styles.navItem}>
-                <a href="/work" className={styles.navLink}>
+                <Link to="/work" className={styles.navLink}>
                   Work
-                </a>
+                </Link>
               </li>
               <li className={styles.navItem}>
-                <a href="/about" className={styles.navLink}>
+                <NavLink to="/about" className={styles.navLink}>
                   About
-                </a>
+                </NavLink>
               </li>
               <li className={styles.navItem}>
-                <a href="/contact" className={styles.navLink}>
+                <Link to="/contact" className={styles.navLink}>
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>
