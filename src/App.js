@@ -8,7 +8,7 @@ function App() {
   return (
     <Router>
       <div className={styles.container}>
-        {/* <Navbar /> */}
+        <Navbar />
         <Switch>
           <Route path="/" exact>
             <Home />

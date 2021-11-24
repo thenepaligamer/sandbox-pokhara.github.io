@@ -5,7 +5,8 @@ body {
 }
 
 .container {
-  width: 85%;
+  width: 100%;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -35,8 +36,10 @@ body {
   text-align: center;
   padding: 0 4em;
 }
-/* .info {
-} */
+
+.info {
+  margin-bottom: 6em;
+}
 
 .infoTitle {
   text-align: center;
@@ -130,7 +133,7 @@ body {
 }
 
 .expertiseAws {
-  width: 300px;
+  width: 290px;
   height: 100px;
 }
 
@@ -178,6 +181,9 @@ body {
   .serviceDescription {
     text-align: center;
   }
+  .expertiseAws {
+    width: 320px;
+  }
 }
 
 @media (min-width: 545px) {
@@ -190,6 +196,21 @@ body {
 }
 
 @media (min-width: 935px) {
+  .heroTitle {
+    font-size: 5rem;
+  }
+
+  .subtitle,
+  .expertiseDetails,
+  .serviceDescription {
+    font-size: 1.125rem;
+  }
+
+  .infoTitle,
+  .expertiseTitle {
+    font-size: 3rem;
+  }
+
   .expertise {
     flex-direction: row;
     gap: 1em;

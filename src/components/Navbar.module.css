@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  color: #404040;
+  background: #f8f9fc;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 4em;
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-around;
+  padding: 1em 0.5em;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav {
+  position: fixed;
+  background: #f8f9fc;
+  z-index: 10;
+  top: 60px;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.fadeIn {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 300ms linear;
+}
+
+.fadeOut {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 300ms, opacity 300ms linear;
+  /* opacity: 0;
+  visibility: hidden;
+  animation-name: fadeOutOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1s; */
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  padding: 0;
+  height: 100%;
+  z-index: 10;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #525962;
+  opacity: 0.7;
+  transition: color 500ms ease-in-out;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+}
+
+.navLink:hover,
+.navLink:focus {
+  color: #ef4b6c;
+}
+
+.closeNav {
+  border: 0;
+  background: 0;
+  color: black;
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 0.5em;
+  position: absolute;
+}
+
+.openNav {
+  border: 0;
+  background: 0;
+  color: #404044;
+  cursor: pointer;
+  padding: 0.5em;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 935px) {
+  .headerContent {
+    justify-content: center;
+  }
+  .nav {
+    position: initial;
+    opacity: 1;
+    visibility: visible;
+  }
+  .closeNav,
+  .openNav {
+    display: none;
+  }
+
+  .navList {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-left: 2em;
+    margin-top: 0.1em;
+  }
+
+  .navLink {
+    margin-left: 2em;
+    font-size: 0.9rem;
+    color: #404040;
+    opacity: 0.9;
+  }
+}

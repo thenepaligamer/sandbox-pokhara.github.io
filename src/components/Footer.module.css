@@ -4,7 +4,8 @@
 }
 
 .container {
-  width: 85%;
+  width: 100%;
+  max-width: 1000px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -38,4 +39,10 @@
 .footerText {
   text-align: center;
   padding: 0.5em;
+}
+
+@media (min-width: 935px) {
+  .footerText {
+    font-size: 1.125rem;
+  }
 }
