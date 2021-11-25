@@ -1,3 +1,7 @@
+body {
+  overflow-y: scroll;
+}
+
 .container {
   background: #f8f9fc;
   width: 100%;

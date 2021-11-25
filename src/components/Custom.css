@@ -3,10 +3,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80px;
-  height: 30px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
+  margin-top: 0.15em;
   /* border: 3px solid #fff; */
 }
 .menuBtnBurger {
@@ -59,4 +58,25 @@
   -moz-transition: none !important;
   -o-transition: none !important;
   transition: none !important;
+}
+
+.lockScroll {
+  overflow: hidden;
+}
+
+.activeNav::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  top: 20px;
+  left: 30%;
+  height: 1px;
+  margin-left: -5px;
+  border-bottom: 2px solid #e14b75;
+  border-radius: 40px;
+  transition: all 500ms ease-in-out;
+}
+
+.passiveNav {
+  font-weight: 700;
 }

@@ -14,15 +14,21 @@ function Navbar() {
   const { width } = useWindowDimensions();
 
   const toggleNav = () => {
-    if (isOpen) {
-      buttonRef.current.classList.remove("open");
-      logoRef.current.style.visibility = "visible";
-    } else {
-      buttonRef.current.classList.add("open");
-      logoRef.current.style.visibility = "hidden";
+    if (width <= 935) {
+      setIsOpen((prev) => !prev);
+      if (isOpen) {
+        document.body.classList.remove("lockScroll");
+        buttonRef.current.classList.remove("open");
+        logoRef.current.style.visibility = "visible";
+      } else {
+        buttonRef.current.classList.add("open");
+        document.body.classList.add("lockScroll");
+        logoRef.current.style.visibility = "hidden";
+      }
     }
-    setIsOpen((prev) => !prev);
   };
+
+  const activeNav = () => {};
 
   useEffect(() => {
     if (width > 935) {
@@ -41,15 +47,15 @@ function Navbar() {
             <Link className={styles.logoLink} to="/">
               <img
                 src={Logo}
-                style={{ width: "100px", height: "30px" }}
                 ref={logoRef}
+                style={{ width: "100px", height: "30px" }}
               />
             </Link>
           </div>
           <div
             className="menuBtn"
             ref={buttonRef}
-            onClick={toggleNav}
+            onClick={width < 935 ? toggleNav : null}
             style={width > 935 ? { opacity: 0, visibility: "hidden" } : null}
           >
             <div className="menuBtnBurger"></div>
@@ -60,24 +66,46 @@ function Navbar() {
           >
             <ul className={styles.navList}>
               <li className={styles.navItem}>
-                <Link to="/" className={styles.navLink}>
+                <NavLink
+                  exact
+                  to="/"
+                  className={styles.navLink}
+                  activeClassName={width >= 935 ? "activeNav" : "passiveNav"}
+                  onClick={toggleNav}
+                >
                   Home
-                </Link>
+                </NavLink>
               </li>
               <li className={styles.navItem}>
-                <Link to="/work" className={styles.navLink}>
+                <NavLink
+                  to="/work"
+                  className={styles.navLink}
+                  onClick={toggleNav}
+                  activeClassName={width >= 935 ? "activeNav" : "passiveNav"}
+                >
                   Work
-                </Link>
+                </NavLink>
               </li>
               <li className={styles.navItem}>
-                <NavLink to="/about" className={styles.navLink}>
+                <NavLink
+                  to="/about"
+                  className={styles.navLink}
+                  onClick={toggleNav}
+                  activeClassName={width >= 935 ? "activeNav" : "passiveNav"}
+                >
                   About
                 </NavLink>
               </li>
               <li className={styles.navItem}>
-                <Link to="/contact" className={styles.navLink}>
+                <NavLink
+                  to="/contact"
+                  className={styles.navLink}
+                  onClick={toggleNav}
+                  // activeStyle={{ fontWeight: 700 }}
+                  activeClassName={width >= 935 ? "activeNav" : "passiveNav"}
+                >
                   Contact
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </nav>
