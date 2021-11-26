@@ -3,6 +3,7 @@ import styles from "./App.module.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Service from "./pages/Service";
 
 function App() {
   return (
@@ -12,6 +13,9 @@ function App() {
         <Switch>
           <Route path="/" exact>
             <Home />
+          </Route>
+          <Route path="/service">
+            <Service />
           </Route>
         </Switch>
         <Footer />

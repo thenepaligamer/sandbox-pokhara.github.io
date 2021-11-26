@@ -29,7 +29,12 @@ function Home() {
             <div className={styles.serviceContainer}>
               <div className={styles.serviceDuelist}>
                 <div className={styles.serviceItems}>
-                  <div className={styles.serviceIcons}>
+                  <div
+                    className={styles.serviceIcons}
+                    style={{
+                      background: "linear-gradient(45deg, #84E4B1, #D7F6B4)",
+                    }}
+                  >
                     <i class="fas fa-mobile-alt fa-2x"></i>
                   </div>
                   <div className={styles.serviceDescription}>
@@ -37,7 +42,12 @@ function Home() {
                   </div>
                 </div>
                 <div className={styles.serviceItems}>
-                  <div className={styles.serviceIcons}>
+                  <div
+                    className={styles.serviceIcons}
+                    style={{
+                      background: "linear-gradient(45deg, #a39cf4, #D9C6FD)",
+                    }}
+                  >
                     <i class="fas fa-blog fa-2x"></i>
                   </div>
                   <div className={styles.serviceDescription}>
@@ -47,13 +57,23 @@ function Home() {
               </div>
               <div className={styles.serviceDuelist}>
                 <div className={styles.serviceItems}>
-                  <div className={styles.serviceIcons}>
+                  <div
+                    className={styles.serviceIcons}
+                    style={{
+                      background: "linear-gradient(45deg, #FFB5E8, #FFD6E6)",
+                    }}
+                  >
                     <i class="fab fa-figma fa-2x"></i>
                   </div>
                   <div className={styles.serviceDescription}>UI/UX</div>
                 </div>
                 <div className={styles.serviceItems}>
-                  <div className={styles.serviceIcons}>
+                  <div
+                    className={styles.serviceIcons}
+                    style={{
+                      background: "linear-gradient(45deg, #ff9d97, #FFCDBA)",
+                    }}
+                  >
                     <i class="fas fa-digital-tachograph fa-2x"></i>
                   </div>
                   <div className={styles.serviceDescription}>
@@ -63,7 +83,12 @@ function Home() {
               </div>
               <div className={styles.serviceDuelist}>
                 <div className={styles.serviceItems}>
-                  <div className={styles.serviceIcons}>
+                  <div
+                    className={styles.serviceIcons}
+                    style={{
+                      background: "linear-gradient(45deg, #ffc48a, #FFE9B4)",
+                    }}
+                  >
                     <i class="fas fa-desktop fa-2x"></i>
                   </div>
                   <div className={styles.serviceDescription}>
@@ -71,7 +96,12 @@ function Home() {
                   </div>
                 </div>
                 <div className={styles.serviceItems}>
-                  <div className={styles.serviceIcons}>
+                  <div
+                    className={styles.serviceIcons}
+                    style={{
+                      background: "linear-gradient(45deg, #9EBBFC, #A8DFF2)",
+                    }}
+                  >
                     <i class="fas fa-calendar-week fa-2x"></i>
                   </div>
                   <div className={styles.serviceDescription}>

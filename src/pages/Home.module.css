@@ -8,6 +8,7 @@ body {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
+  margin-bottom: 3em;
 }
 
 .mainContainer {
@@ -30,7 +31,7 @@ body {
   font-weight: 500;
   line-height: 0.95;
   margin-bottom: 0.15em;
-  padding: 0 0.2 em;
+  padding: 0 0.2em;
 }
 
 .subtitle {
@@ -86,11 +87,10 @@ body {
 
 .serviceIcons {
   text-align: center;
-  background: #e14b75;
-  color: #efefef;
+  color: #f8f9fc;
   border-radius: 50%;
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;

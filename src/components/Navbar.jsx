@@ -28,13 +28,12 @@ function Navbar() {
     }
   };
 
-  const activeNav = () => {};
-
   useEffect(() => {
     if (width > 935) {
       buttonRef.current.classList.remove("open");
       logoRef.current.style.visibility = "visible";
       buttonRef.current.classList.add("notransition");
+      document.body.classList.remove("lockScroll");
       setIsOpen(false);
     }
   }, [width]);
@@ -78,12 +77,12 @@ function Navbar() {
               </li>
               <li className={styles.navItem}>
                 <NavLink
-                  to="/work"
+                  to="/service"
                   className={styles.navLink}
                   onClick={toggleNav}
                   activeClassName={width >= 935 ? "activeNav" : "passiveNav"}
                 >
-                  Work
+                  Service
                 </NavLink>
               </li>
               <li className={styles.navItem}>
@@ -101,7 +100,6 @@ function Navbar() {
                   to="/contact"
                   className={styles.navLink}
                   onClick={toggleNav}
-                  // activeStyle={{ fontWeight: 700 }}
                   activeClassName={width >= 935 ? "activeNav" : "passiveNav"}
                 >
                   Contact
