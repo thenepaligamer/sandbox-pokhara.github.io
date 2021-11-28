@@ -179,6 +179,12 @@ body {
   }
 }
 
+@media (min-width: 780px) {
+  .card {
+    max-width: 495px;
+  }
+}
+
 @media (min-width: 875px) {
   .cardTitle {
     font-size: 2rem;
