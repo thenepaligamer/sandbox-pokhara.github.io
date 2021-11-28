@@ -7,9 +7,11 @@ import WebImg from "../img/web.jpg";
 import cx from "classnames";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import useWindowDimensions from "../custom_hooks/useWindowDimensions";
 AOS.init();
 
 function Service() {
+  const { width } = useWindowDimensions();
   const menuItems = [
     {
       img: RpaImg,
@@ -54,7 +56,13 @@ function Service() {
             <div
               className={cx(styles.card)}
               key={items.title}
-              data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+              data-aos={
+                width < 875
+                  ? "fade-up"
+                  : width > 875 && index % 2 == 0
+                  ? "fade-right"
+                  : "fade-left"
+              }
               data-aos-duration="1000"
               data-aos-offset="300"
               data-aos-easing="ease-in-out"

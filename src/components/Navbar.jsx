@@ -9,7 +9,6 @@ import { Link, NavLink, useHistory } from "react-router-dom";
 function Navbar() {
   const buttonRef = useRef(null);
   const logoRef = useRef(null);
-  const history = useHistory();
   const [isOpen, setIsOpen] = useState(false);
   const { width } = useWindowDimensions();
 
