@@ -129,12 +129,12 @@ body {
 
 .expertiseDjango,
 .expertiseTensorflow {
-  width: 260px;
+  width: 250px;
   height: 80px;
 }
 
 .expertiseAws {
-  width: 290px;
+  width: 260px;
   height: 100px;
 }
 
