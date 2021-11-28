@@ -5,6 +5,9 @@ import RpaImg from "../img/rap.jpg";
 import MobileImg from "../img/Mobilev2.jpg";
 import WebImg from "../img/web.jpg";
 import cx from "classnames";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 function Service() {
   const menuItems = [
@@ -31,7 +34,14 @@ function Service() {
     <div className={styles.container}>
       <main className={styles.mainContainer}>
         <div className={styles.gifFlexContainer}>
-          <section className={styles.hero}>
+          <section
+            className={styles.hero}
+            data-aos="fade-in"
+            data-aos-offset="300"
+            data-aos-delay="50"
+            data-aos-duration="700"
+            data-aos-easing="ease-in-out"
+          >
             <h1 className={styles.heroTitle}>Our Services</h1>
             <p className={styles.subtitle}>
               We have everything you need to take your business to the next
@@ -40,8 +50,15 @@ function Service() {
           </section>
         </div>
         <section className={styles.cardContainer}>
-          {menuItems.map((items) => (
-            <div className={styles.card} key={items.title}>
+          {menuItems.map((items, index) => (
+            <div
+              className={cx(styles.card)}
+              key={items.title}
+              data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+              data-aos-duration="1000"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-out"
+            >
               <div className={cx(styles.cardImgContainer)}>
                 <img
                   src={items.img}
@@ -56,7 +73,7 @@ function Service() {
               <div
                 className={cx(
                   styles.cardContent,
-                  items.title == "App Development" ? styles.cardOrder : null
+                  index % 2 !== 0 ? styles.cardOrder : null
                 )}
               >
                 <div className={styles.cardTitle}>{items.title}</div>

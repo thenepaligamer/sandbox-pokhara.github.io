@@ -1,0 +1,251 @@
+body {
+  margin: 0;
+  color: #404040;
+  background: #f8f9fc;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 3em;
+}
+
+.mainContainer {
+  /* background-image: linear-gradient(60deg, #544bcd, #4ea5e8); */
+  padding: 2em 0;
+}
+
+.titleContainer {
+  margin-top: 2em;
+}
+
+.details,
+.title,
+.subtitle {
+  margin: 0;
+  text-align: center;
+}
+
+.hero {
+  margin-bottom: 5em;
+  padding: 1em 1.5em;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.details {
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #4f4f4f;
+  margin-bottom: 1em;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 0.95;
+  margin-bottom: 0.75em;
+  padding: 0 0.2em;
+  position: relative;
+}
+
+.subtitle {
+  padding: 0 0.5em;
+}
+
+.title::before {
+  content: "";
+  width: 60px;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-bottom: -22px;
+  background-color: #ef4b6c;
+  transform: translateX(-50%);
+}
+
+.imgContainer {
+  max-width: 100%;
+  order: -1;
+}
+.img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.info {
+  margin-bottom: 1.5em;
+}
+
+.infoTitle {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 0.5em 1em;
+  position: relative;
+  margin-bottom: 1.5em;
+}
+
+.infoTitle::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  background-color: #ef4b6c;
+  transform: translateX(-50%);
+}
+
+.cardContainer {
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: 2em 1fr 2em;
+  grid-template-areas: ". cardOne ." ". cardTwo ." ". cardThree .";
+  grid-auto-rows: 1fr;
+  align-items: center;
+  justify-items: center;
+  row-gap: 2em;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  max-width: 70%;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1.5em;
+  flex: 1 1 auto;
+}
+
+.cardOne {
+  border-top: 3px solid #ffbde8;
+  grid-area: cardOne;
+}
+.cardTwo {
+  border-top: 3px solid #b4a9f7;
+  grid-area: cardTwo;
+}
+.cardThree {
+  border-top: 3px solid #a1c5fa;
+  grid-area: cardThree;
+}
+
+.icon {
+  margin-bottom: 1em;
+  text-align: center;
+  color: #f8f9fc;
+  border-radius: 100%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1em;
+  background: #b403ff;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+.cardDescription {
+  font-size: 0.85rem;
+  text-align: center;
+  /* color: #c0e5ff; */
+}
+
+@media (min-width: 500px) {
+  .cardTitle {
+    font-size: 1.5rem;
+  }
+
+  .cardDescription {
+    margin-bottom: 1em;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 875px) {
+  .cardTitle {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .cardDescription {
+    margin-bottom: 1em;
+    font-size: 1.005rem;
+  }
+}
+
+@media (min-width: 935px) {
+  .details {
+    letter-spacing: 6px;
+    font-size: 0.9 5rem;
+  }
+  .title {
+    font-size: 5rem;
+    margin-bottom: 0.5em;
+  }
+
+  .infoTitle {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 999px) {
+  .cardContainer {
+    display: flex;
+    padding: 0 3em;
+    gap: 3em;
+  }
+
+  .card {
+    width: 270px;
+  }
+}
+
+@media (min-width: 1030px) {
+  .hero {
+    flex-direction: row;
+    column-gap: 1em;
+    padding: 1em 2em;
+  }
+
+  .imgContainer {
+    order: initial;
+  }
+
+  .img {
+    padding-top: 1em;
+  }
+
+  .details,
+  .title,
+  .subtitle {
+    text-align: left;
+  }
+
+  .title {
+    padding: 0;
+  }
+
+  .title::before {
+    height: 2px;
+    margin: 0;
+    bottom: -6px;
+  }
+}

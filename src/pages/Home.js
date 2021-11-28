@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Home.module.css";
 import cx from "classnames";
 import Tensorflow from "../img/tensorflowv2.png";
@@ -10,12 +10,22 @@ import Postgre from "../img/postgrev2.png";
 import Python from "../img/pythonv2.png";
 import ReactLogo from "../img/reactv2.png";
 import ReactNative from "../img/reactnativev2.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 function Home() {
   return (
     <div>
       <div className={styles.mainContainer}>
-        <main className={cx(styles.container)}>
+        <main
+          className={cx(styles.container)}
+          data-aos="fade-in"
+          data-aos-offset="300"
+          data-aos-delay="50"
+          data-aos-duration="700"
+          data-aos-easing="ease-in-out"
+        >
           <section className={styles.hero}>
             <h1 className={styles.heroTitle}>We are Sandbox</h1>
             <p className={styles.subtitle}>
@@ -111,7 +121,13 @@ function Home() {
               </div>
             </div>
           </section>
-          <section>
+          <section
+            data-aos="fade-up"
+            data-aos-offset="300"
+            data-aos-delay="50"
+            data-aos-duration="700"
+            data-aos-easing="ease-in-out"
+          >
             <div className={styles.expertiseDescription}>
               <h1 className={styles.expertiseTitle}>Expertise</h1>
               <p className={styles.expertiseDetails}>
