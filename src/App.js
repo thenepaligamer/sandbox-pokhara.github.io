@@ -7,6 +7,7 @@ import Service from "./pages/Service";
 import cx from "classnames";
 import About from "./pages/About";
 import { useState, useEffect } from "react";
+import Contact from "./pages/Contact";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -38,6 +39,9 @@ function App() {
             </Route>
             <Route path="/about">
               <About />
+            </Route>
+            <Route path="/contact">
+              <Contact />
             </Route>
           </Switch>
           <Footer />
