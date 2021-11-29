@@ -8,6 +8,8 @@ import cx from "classnames";
 import About from "./pages/About";
 import { useState, useEffect } from "react";
 import Contact from "./pages/Contact";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -29,6 +31,17 @@ function App() {
         </div>
       ) : (
         <div className={cx(styles.container)}>
+          <ToastContainer
+            position="bottom-right"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+          />
           <Navbar />
           <Switch>
             <Route path="/" exact>

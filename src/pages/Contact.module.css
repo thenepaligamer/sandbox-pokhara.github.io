@@ -1,0 +1,251 @@
+body {
+  margin: 0;
+  color: #404040;
+  background: #f8f9fc;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 3em;
+}
+
+.mainContainer {
+  /* background-image: linear-gradient(60deg, #544bcd, #4ea5e8); */
+  padding: 2em 0;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  padding: 1em 1.5em;
+  gap: 5em;
+  margin-bottom: 3em;
+}
+
+.titleContainer {
+  margin-bottom: 2em;
+  /* border-bottom: 2px solid #898989; */
+}
+
+.title,
+.subtitle {
+  margin: 0;
+  text-align: center;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 0.95;
+  margin-bottom: 0.75em;
+  padding: 0 0.2em;
+  position: relative;
+}
+
+.subtitle {
+  padding: 0 0.5em 2em 0.5em;
+}
+
+.title::before {
+  content: "";
+  width: 60px;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-bottom: -22px;
+  background-color: #ef4b6c;
+  transform: translateX(-50%);
+}
+.gifContainer {
+  flex: 1 1 0;
+  /* max-width: 50%; */
+  display: flex;
+  flex-direction: column;
+}
+
+.img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.formContainer {
+  width: 100%;
+  flex: 1 1 0;
+}
+
+.formTitle {
+  padding: 0 1em;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+.forms {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
+.formGroup {
+  margin-bottom: 1em;
+  transition: all 300ms;
+  flex: 1 1 auto;
+}
+
+.formGroupRight {
+  margin-left: 2em;
+}
+
+.labels {
+  font-size: 0.96rem;
+  display: block;
+  opacity: 1;
+  transform: translateY(-1.65em);
+  transform-origin: 0 0;
+  transition: all 300ms;
+  color: #b2aab2;
+}
+
+.inputs {
+  box-shadow: none;
+  border-radius: 0;
+  border-style: none none solid none;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  transition: all 500ms;
+  padding: 0.5em 0;
+  font-size: 0.85rem;
+  color: #404040;
+  background: #f8f9fc;
+}
+
+.inputs::placeholder {
+  color: transparent;
+}
+
+.inputs:focus {
+  box-shadow: none;
+  outline: none;
+  border-color: #b1a7f7;
+}
+
+.formGroup:focus-within {
+  transform: scale(1.05, 1.05);
+}
+
+.inputs:focus + .labels,
+.inputs:not(:placeholder-shown) + .labels {
+  transform: translateY(-2.8em) scale(0.7);
+}
+
+.btn {
+  position: relative;
+  background-image: linear-gradient(to bottom right, #b1a7f7, #b4a9f7);
+  width: 100%;
+  color: white;
+  text-transform: uppercase;
+  padding: 1em 1.5em;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  border: 0;
+  outline: 0;
+  transform: scale(1);
+  transition: transform 500ms;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.btn:hover,
+.btn:focus {
+  transform: scale(1.1);
+}
+
+.btnTwo {
+  position: relative;
+  background-image: linear-gradient(to bottom right, #ab47bc, #9127ac);
+  color: white;
+  text-transform: uppercase;
+  padding: 1em 1.5em;
+  border-radius: 2em;
+  cursor: pointer;
+  font-size: 0.85rem;
+  border: 0;
+  outline: 0;
+  transform: scale(1);
+  transition: transform 500ms;
+  overflow: hidden;
+  margin-bottom: 1em;
+}
+
+.btnTwo:hover,
+.btnTwo:focus {
+  transform: scale(1.1);
+}
+
+.locationSection {
+  padding: 2.5em;
+  text-align: left;
+}
+
+.location,
+.mail {
+  margin-bottom: 2em;
+}
+
+.locationTitle,
+.mailTitle {
+  font-size: 1.25rem;
+  letter-spacing: 0.95px;
+  font-weight: 700;
+  margin-bottom: 0.15em;
+}
+
+.locationCompanyName,
+.locationStreet,
+.mailAddress {
+  font-size: 0.9rem;
+}
+
+.error {
+  border-bottom: 1px solid red;
+}
+
+@media (min-width: 470px) {
+  .btn {
+    max-width: 40%;
+  }
+}
+
+@media (min-width: 555px) {
+  .btn {
+    max-width: 30%;
+  }
+}
+
+@media (min-width: 780px) {
+  .hero {
+    flex-direction: row;
+  }
+
+  .title,
+  .subtitle {
+    text-align: left;
+  }
+  .title {
+    padding-left: 0;
+  }
+
+  .locationSection {
+    padding: 2.5em;
+  }
+}
+
+@media (min-width: 935px) {
+  .title {
+    font-size: 5rem;
+    margin-bottom: 0.5em;
+  }
+}
