@@ -30,7 +30,15 @@ function About() {
             </div>
           </div>
           <div className={styles.imgContainer}>
-            <img src={Computer} className={styles.img}></img>
+            <img
+              src={Computer}
+              className={styles.img}
+              data-aos="fade-in"
+              data-aos-offset="300"
+              data-aos-delay="50"
+              data-aos-duration="700"
+              data-aos-easing="ease-in-out"
+            ></img>
           </div>
         </section>
         <section className={styles.info}>
