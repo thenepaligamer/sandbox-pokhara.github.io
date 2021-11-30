@@ -176,7 +176,8 @@ function Contact() {
             <div className={styles.locationCompanyName}>
               Sandbox Software Pvt Ltd.
             </div>
-            <div className={styles.locationStreet}>Bhairab-tole, Pokhara-2</div>
+            <div className={styles.locationStreet}>Dihikopatan, Phewa Marg</div>
+            <div className={styles.locationStreet}>Lakeside, Pokhara-6</div>
           </div>
           <div className={styles.mail}>
             <div className={styles.mailTitle}>Reach Out</div>
