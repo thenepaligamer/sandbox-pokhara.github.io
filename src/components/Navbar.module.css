@@ -57,7 +57,7 @@ body {
 .navList {
   display: flex;
   list-style: none;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
   margin: auto;
@@ -72,7 +72,7 @@ body {
   opacity: 0.7;
   transition: color 500ms ease-in-out;
   text-transform: uppercase;
-  font-size: 0.85rem;
+  font-size: 1rem;
   letter-spacing: 1.5px;
   position: relative;
 }
