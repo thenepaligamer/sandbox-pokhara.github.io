@@ -102,9 +102,9 @@ function Home() {
                       background: "linear-gradient(45deg, #9EBBFC, #A8DFF2)",
                     }}
                   >
-                    <i class="fas fa-calendar-week fa-2x"></i>
+                    <i class="fas fa-robot fa-2x"></i>
                   </div>
-                  <div className={styles.serviceDescription}>Event Management</div>
+                  <div className={styles.serviceDescription}>Artificial Intelligence</div>
                 </div>
               </div>
             </div>

@@ -153,13 +153,13 @@ function Contact() {
         <section className={styles.locationSection}>
           <div className={styles.location}>
             <div className={styles.locationTitle}>Swing By</div>
-            <div className={styles.locationCompanyName}>Sandbox Software Pvt Ltd.</div>
-            <div className={styles.locationStreet}>Dihikopatan, Phewa Marg</div>
-            <div className={styles.locationStreet}>Lakeside, Pokhara-6</div>
+            <div className={styles.locationCompanyName}>Sandbox Software Pvt. Ltd.</div>
+            <div className={styles.locationStreet}>Bhairab Tole</div>
+            <div className={styles.locationStreet}>Pokhara-2</div>
           </div>
           <div className={styles.mail}>
             <div className={styles.mailTitle}>Reach Out</div>
-            <div className={styles.mailAddress}>info@sandbox.com.np</div>
+            <div className={styles.mailAddress}>pradishbijukchhe@gmail.com</div>
           </div>
           <div></div>
         </section>

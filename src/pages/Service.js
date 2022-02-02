@@ -16,7 +16,7 @@ function Service() {
       img: RpaImg,
       title: "Computer Vision",
       description:
-        "We focus on developing customized software using Robotic Process Automation(RPA). We provide services to create AI enabled bots as per users' requirements.",
+        "Computer vision projects translate digital visual content into explicit descriptions to gather multi-dimensional data. This data is then turned into computer-readable language to aid the decision-making process. We devleop easy-to-use applications by using computer vision.",
     },
     {
       img: MobileImg,
