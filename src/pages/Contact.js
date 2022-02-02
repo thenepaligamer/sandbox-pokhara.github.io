@@ -1,12 +1,10 @@
-import React, { useState } from "react";
-import styles from "./Contact.module.css";
-import gif from "../img/computer.gif";
-import cx from "classnames";
-import { useHistory } from "react-router";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import cx from "classnames";
+import React, { useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import styles from "./Contact.module.css";
 AOS.init();
 // import "./ButtonCustom.css";
 
@@ -31,7 +29,6 @@ function Contact() {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [error, setError] = useState({});
-  const history = useHistory();
   const handleSubmit = (e) => {
     setError({});
     e.preventDefault();
@@ -79,27 +76,19 @@ function Contact() {
             <div className={styles.titleContainer}>
               <div className={styles.title}>Contact Us</div>
               <div className={styles.subtitle}>
-                Please provide some information on yourself or your goals and
-                we’ll move the conversation on from there.
+                Please provide some information on yourself or your goals and we’ll move the
+                conversation on from there.
               </div>
             </div>
           </div>
           <div className={styles.formContainer}>
             <div className={styles.formTitle}>
-              Have an inquiry or some feedback for us? Fill out the form below
-              to contact our team.
+              Have an inquiry or some feedback for us? Fill out the form below to contact our team.
             </div>
-            <form
-              className={styles.forms}
-              autoComplete="off"
-              onSubmit={handleSubmit}
-            >
+            <form className={styles.forms} autoComplete="off" onSubmit={handleSubmit}>
               <div className={styles.formGroup}>
                 <input
-                  className={cx(
-                    styles.inputs,
-                    error.name ? styles.error : null
-                  )}
+                  className={cx(styles.inputs, error.name ? styles.error : null)}
                   type="text"
                   id="name"
                   name="name"
@@ -115,10 +104,7 @@ function Contact() {
               <div className={styles.formWrapper}></div>
               <div className={styles.formGroup}>
                 <input
-                  className={cx(
-                    styles.inputs,
-                    error.email ? styles.error : null
-                  )}
+                  className={cx(styles.inputs, error.email ? styles.error : null)}
                   type="email"
                   id="email"
                   name="email"
@@ -132,10 +118,7 @@ function Contact() {
               </div>
               <div className={styles.formGroup}>
                 <input
-                  className={cx(
-                    styles.inputs,
-                    error.phone ? styles.error : null
-                  )}
+                  className={cx(styles.inputs, error.phone ? styles.error : null)}
                   type="number"
                   id="phone"
                   name="phone"
@@ -149,10 +132,7 @@ function Contact() {
               </div>
               <div className={styles.formGroup}>
                 <input
-                  className={cx(
-                    styles.inputs,
-                    error.message ? styles.error : null
-                  )}
+                  className={cx(styles.inputs, error.message ? styles.error : null)}
                   type="text"
                   id="message"
                   name="messgae"
@@ -173,9 +153,7 @@ function Contact() {
         <section className={styles.locationSection}>
           <div className={styles.location}>
             <div className={styles.locationTitle}>Swing By</div>
-            <div className={styles.locationCompanyName}>
-              Sandbox Software Pvt Ltd.
-            </div>
+            <div className={styles.locationCompanyName}>Sandbox Software Pvt Ltd.</div>
             <div className={styles.locationStreet}>Dihikopatan, Phewa Marg</div>
             <div className={styles.locationStreet}>Lakeside, Pokhara-6</div>
           </div>

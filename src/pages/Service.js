@@ -1,13 +1,12 @@
-import React from "react";
-import styles from "./Service.module.css";
-import logoComputer from "../img/computer.gif";
-import RpaImg from "../img/rap.jpg";
-import MobileImg from "../img/Mobilev2.jpg";
-import WebImg from "../img/web.jpg";
-import cx from "classnames";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import cx from "classnames";
+import React from "react";
 import useWindowDimensions from "../custom_hooks/useWindowDimensions";
+import MobileImg from "../img/Mobilev2.jpg";
+import RpaImg from "../img/rap.jpg";
+import WebImg from "../img/web.jpg";
+import styles from "./Service.module.css";
 AOS.init();
 
 function Service() {
@@ -46,8 +45,7 @@ function Service() {
           >
             <h1 className={styles.heroTitle}>Our Services</h1>
             <p className={styles.subtitle}>
-              We have everything you need to take your business to the next
-              level.
+              We have everything you need to take your business to the next level.
             </p>
           </section>
         </div>
@@ -59,7 +57,7 @@ function Service() {
               data-aos={
                 width < 875
                   ? "fade-up"
-                  : width > 875 && index % 2 == 0
+                  : width > 875 && index % 2 === 0
                   ? "fade-right"
                   : "fade-left"
               }
@@ -69,25 +67,17 @@ function Service() {
             >
               <div className={cx(styles.cardImgContainer)}>
                 <img
+                  alt={items.title}
                   src={items.img}
                   className={cx(
                     styles.cardImg,
-                    items.title == "App Development"
-                      ? styles.cardImgSecond
-                      : null
+                    items.title === "App Development" ? styles.cardImgSecond : null
                   )}
                 ></img>
               </div>
-              <div
-                className={cx(
-                  styles.cardContent,
-                  index % 2 !== 0 ? styles.cardOrder : null
-                )}
-              >
+              <div className={cx(styles.cardContent, index % 2 !== 0 ? styles.cardOrder : null)}>
                 <div className={styles.cardTitle}>{items.title}</div>
-                <div className={styles.cardDescription}>
-                  {items.description}
-                </div>
+                <div className={styles.cardDescription}>{items.description}</div>
               </div>
             </div>
           ))}

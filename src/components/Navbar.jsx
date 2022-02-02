@@ -1,10 +1,10 @@
-import React, { useRef, useState, useEffect } from "react";
-import Logo from "../img/logov2.svg";
 import cx from "classnames";
-import styles from "./Navbar.module.css";
+import React, { useEffect, useRef, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import useWindowDimensions from "../custom_hooks/useWindowDimensions";
+import Logo from "../img/logov2.svg";
 import "./Custom.css";
-import { Link, NavLink, useHistory } from "react-router-dom";
+import styles from "./Navbar.module.css";
 
 function Navbar() {
   const buttonRef = useRef(null);
@@ -44,6 +44,7 @@ function Navbar() {
           <div className={styles.logoContainer}>
             <Link className={styles.logoLink} to="/">
               <img
+                alt="sandbox-logo"
                 src={Logo}
                 ref={logoRef}
                 style={{ width: "100px", height: "30px" }}
@@ -59,9 +60,7 @@ function Navbar() {
             <div className="menuBtnBurger"></div>
           </div>
 
-          <nav
-            className={cx(styles.nav, isOpen ? styles.fadeIn : styles.fadeOut)}
-          >
+          <nav className={cx(styles.nav, isOpen ? styles.fadeIn : styles.fadeOut)}>
             <ul className={styles.navList}>
               <li className={styles.navItem}>
                 <NavLink
