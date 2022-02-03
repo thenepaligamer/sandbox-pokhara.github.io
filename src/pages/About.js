@@ -46,7 +46,7 @@ function About() {
           <div className={styles.cardContainer}>
             <div className={cx(styles.card, styles.cardOne)}>
               <div className={styles.icon} style={{ backgroundColor: "#ffbde8" }}>
-                <i class="fas fa-bullseye fa-2x"></i>
+                <i className="fas fa-bullseye fa-2x"></i>
               </div>
               <div className={styles.cardTitle}>Our Mission</div>
               <div className={styles.cardDescription}>
@@ -57,7 +57,7 @@ function About() {
             </div>
             <div className={cx(styles.card, styles.cardTwo)}>
               <div className={styles.icon} style={{ backgroundColor: "#B4A9F7" }}>
-                <i class="fas fa-glasses fa-2x"></i>
+                <i className="fas fa-glasses fa-2x"></i>
               </div>
               <div className={styles.cardTitle}>Our Vision</div>
               <div className={styles.cardDescription}>
@@ -69,7 +69,7 @@ function About() {
 
             <div className={cx(styles.card, styles.cardThree)}>
               <div className={styles.icon} style={{ backgroundColor: "#A1C5FA" }}>
-                <i class="fas fa-mortar-pestle fa-2x"></i>
+                <i className="fas fa-mortar-pestle fa-2x"></i>
               </div>
               <div className={styles.cardTitle}>Our Culture</div>
               <div className={styles.cardDescription}>

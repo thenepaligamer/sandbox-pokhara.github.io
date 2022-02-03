@@ -43,7 +43,7 @@ function Home() {
                       background: "linear-gradient(45deg, #84E4B1, #D7F6B4)",
                     }}
                   >
-                    <i class="fas fa-mobile-alt fa-2x"></i>
+                    <i className="fas fa-mobile-alt fa-2x"></i>
                   </div>
                   <div className={styles.serviceDescription}>App Development</div>
                 </div>
@@ -54,7 +54,7 @@ function Home() {
                       background: "linear-gradient(45deg, #a39cf4, #D9C6FD)",
                     }}
                   >
-                    <i class="fas fa-blog fa-2x"></i>
+                    <i className="fas fa-blog fa-2x"></i>
                   </div>
                   <div className={styles.serviceDescription}>Web Development</div>
                 </div>
@@ -67,7 +67,7 @@ function Home() {
                       background: "linear-gradient(45deg, #FFB5E8, #FFD6E6)",
                     }}
                   >
-                    <i class="fab fa-figma fa-2x"></i>
+                    <i className="fab fa-figma fa-2x"></i>
                   </div>
                   <div className={styles.serviceDescription}>UI/UX</div>
                 </div>
@@ -78,7 +78,7 @@ function Home() {
                       background: "linear-gradient(45deg, #ff9d97, #FFCDBA)",
                     }}
                   >
-                    <i class="fas fa-digital-tachograph fa-2x"></i>
+                    <i className="fas fa-digital-tachograph fa-2x"></i>
                   </div>
                   <div className={styles.serviceDescription}>Digital Marketing/SEO</div>
                 </div>
@@ -91,7 +91,7 @@ function Home() {
                       background: "linear-gradient(45deg, #ffc48a, #FFE9B4)",
                     }}
                   >
-                    <i class="fas fa-desktop fa-2x"></i>
+                    <i className="fas fa-desktop fa-2x"></i>
                   </div>
                   <div className={styles.serviceDescription}>Computer Vision/RPA</div>
                 </div>
@@ -102,7 +102,7 @@ function Home() {
                       background: "linear-gradient(45deg, #9EBBFC, #A8DFF2)",
                     }}
                   >
-                    <i class="fas fa-robot fa-2x"></i>
+                    <i className="fas fa-robot fa-2x"></i>
                   </div>
                   <div className={styles.serviceDescription}>Artificial Intelligence</div>
                 </div>

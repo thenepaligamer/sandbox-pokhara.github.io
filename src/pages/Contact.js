@@ -6,30 +6,14 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import styles from "./Contact.module.css";
 AOS.init();
-// import "./ButtonCustom.css";
 
 function Contact() {
-  // const handleAnimation = (e) => {
-  //   const buttons = document.getElementById("btn");
-
-  //   let x = e.clientX - e.target.offsetLeft;
-  //   let y = e.clientY - e.target.offsetTop;
-
-  //   let ripples = document.createElement("span");
-  //   ripples.style.left = x + "px";
-  //   ripples.style.top = y + "px";
-  //   buttons.appendChild(ripples);
-
-  //   setTimeout(() => {
-  //     ripples.remove();
-  //   }, 1000);
-  // };
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [error, setError] = useState({});
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     setError({});
     e.preventDefault();
     var err = {};
@@ -39,26 +23,45 @@ function Contact() {
     if (email === "") {
       err["email"] = true;
     }
-    if (phone === "") {
-      err["phone"] = true;
-    }
     if (message === "") {
       err["message"] = true;
     }
     setError(err);
-    if (name && email && phone && message) {
+    if (name && email && message) {
       setName("");
       setEmail("");
-      setPhone("");
       setMessage("");
-      toast.success("Data submitted", {
-        position: "bottom-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        draggable: true,
-        progress: undefined,
+
+      const url =
+        "https://39yn7s4rg4.execute-api.us-east-1.amazonaws.com/default/sandbox-software-contact-form";
+
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ name, email, message }),
       });
+
+      if (response.ok) {
+        toast.success("Data submitted", {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          draggable: true,
+          progress: undefined,
+        });
+      } else {
+        toast.error("Unexpected error occured.", {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          draggable: true,
+          progress: undefined,
+        });
+      }
     }
   };
   return (
@@ -96,7 +99,7 @@ function Contact() {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                 ></input>
-                <label for="name" className={styles.labels}>
+                <label htmlFor="name" className={styles.labels}>
                   Name
                 </label>
               </div>
@@ -112,22 +115,8 @@ function Contact() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 ></input>
-                <label for="email" className={styles.labels}>
+                <label htmlFor="email" className={styles.labels}>
                   Email
-                </label>
-              </div>
-              <div className={styles.formGroup}>
-                <input
-                  className={cx(styles.inputs, error.phone ? styles.error : null)}
-                  type="number"
-                  id="phone"
-                  name="phone"
-                  placeholder="Phone no."
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                ></input>
-                <label for="phone" className={styles.labels}>
-                  Phone number
                 </label>
               </div>
               <div className={styles.formGroup}>
@@ -140,7 +129,7 @@ function Contact() {
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                 ></input>
-                <label for="message" className={styles.labels}>
+                <label htmlFor="message" className={styles.labels}>
                   Message
                 </label>
               </div>

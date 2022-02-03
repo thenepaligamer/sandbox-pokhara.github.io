@@ -11,17 +11,17 @@ function Footer() {
         {/* <ul className={styles.socialList}>
           <li className={styles.socialItem}>
             <a href="/" className={styles.socialLink}>
-              <i class="fab fa-facebook fa-sm"></i>
+              <i className="fab fa-facebook fa-sm"></i>
             </a>
           </li>
           <li className={styles.socialItem}>
             <a href="/" className={styles.socialLink}>
-              <i class="fab fa-instagram fa-sm"></i>
+              <i className="fab fa-instagram fa-sm"></i>
             </a>
           </li>
           <li className={styles.socialItem}>
             <a href="/" className={styles.socialLink}>
-              <i class="fab fa-twitter fa-sm"></i>
+              <i className="fab fa-twitter fa-sm"></i>
             </a>
           </li>
         </ul> */}

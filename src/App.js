@@ -1,15 +1,15 @@
-import Home from "./pages/Home";
-import styles from "./App.module.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Service from "./pages/Service";
 import cx from "classnames";
-import About from "./pages/About";
-import { useState, useEffect } from "react";
-import Contact from "./pages/Contact";
+import { useEffect, useState } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import styles from "./App.module.css";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Home from "./pages/Home";
+import Service from "./pages/Service";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -25,8 +25,8 @@ function App() {
     <Router>
       {loading ? (
         <div className={styles.loadWrapper}>
-          <span class={styles.loader}>
-            <span class={styles.loaderInner}></span>
+          <span className={styles.loader}>
+            <span className={styles.loaderInner}></span>
           </span>
         </div>
       ) : (
