@@ -28,7 +28,7 @@ function Home() {
         >
           <section className={styles.hero}>
             <h1 className={styles.heroTitle}>We are Sandbox</h1>
-            <p className={styles.subtitle}>We build our softwares over time, with a plan.</p>
+            <p className={styles.subtitle}>We build our software over time, with a plan.</p>
           </section>
           <section className={styles.info}>
             <div>
@@ -119,8 +119,7 @@ function Home() {
             <div className={styles.expertiseDescription}>
               <h1 className={styles.expertiseTitle}>Expertise</h1>
               <p className={styles.expertiseDetails}>
-                We have expertise in all essential technology and can adapt product to meet users'
-                needs.
+                We have expertise in all essential technology and can adapt product to meet users' needs.
               </p>
             </div>
             <div className={styles.expertise}>
@@ -134,34 +133,19 @@ function Home() {
               <div>
                 <div className={styles.expertiseDjango}>
                   <a href="https://www.djangoproject.com/" target="_blank" rel="noreferrer">
-                    <img
-                      src={Django}
-                      alt="django"
-                      title="django"
-                      className={styles.expertiseIcon}
-                    />
+                    <img src={Django} alt="django" title="django" className={styles.expertiseIcon} />
                   </a>
                 </div>
                 <div className={styles.expertisePython}>
                   <a href="https://www.python.org/" target="_blank" rel="noreferrer">
-                    <img
-                      src={Python}
-                      alt="python"
-                      title="python"
-                      className={styles.expertiseIcon}
-                    />
+                    <img src={Python} alt="python" title="python" className={styles.expertiseIcon} />
                   </a>
                 </div>
               </div>
               <div>
                 <div className={styles.expertiseDocker}>
                   <a href="https://www.docker.com/" target="_blank" rel="noreferrer">
-                    <img
-                      src={Docker}
-                      alt="docker"
-                      title="docker"
-                      className={styles.expertiseIcon}
-                    />
+                    <img src={Docker} alt="docker" title="docker" className={styles.expertiseIcon} />
                   </a>
                 </div>
                 <div className={styles.expertiseAws}>
@@ -171,46 +155,26 @@ function Home() {
                 </div>
                 <div className={styles.expertisePostgres}>
                   <a href="https://www.postgresql.org/" target="_blank" rel="noreferrer">
-                    <img
-                      src={Postgre}
-                      alt="postgresql"
-                      title="postgresql"
-                      className={styles.expertiseIcon}
-                    />
+                    <img src={Postgre} alt="postgresql" title="postgresql" className={styles.expertiseIcon} />
                   </a>
                 </div>
               </div>
               <div>
                 <div className={styles.expertiseTensorflow}>
                   <a href="https://www.tensorflow.org/" target="_blank" rel="noreferrer">
-                    <img
-                      src={Tensorflow}
-                      alt="tensorflow"
-                      title="tensorflow"
-                      className={styles.expertiseIcon}
-                    />
+                    <img src={Tensorflow} alt="tensorflow" title="tensorflow" className={styles.expertiseIcon} />
                   </a>
                 </div>
                 <div className={styles.expertiseMongodb}>
                   <a href="https://www.mongodb.org/" target="_blank" rel="noreferrer">
-                    <img
-                      src={MongoDB}
-                      alt="mongoDB"
-                      title="mongoDB"
-                      className={styles.expertiseIcon}
-                    />
+                    <img src={MongoDB} alt="mongoDB" title="mongoDB" className={styles.expertiseIcon} />
                   </a>
                 </div>
               </div>
               <div>
                 <div className={styles.expertiseReactnative}>
                   <a href="https://reactnative.dev/" target="_blank" rel="noreferrer">
-                    <img
-                      src={ReactNative}
-                      alt="react-native"
-                      title="react-native"
-                      className={styles.expertiseIcon}
-                    />
+                    <img src={ReactNative} alt="react-native" title="react-native" className={styles.expertiseIcon} />
                   </a>
                 </div>
               </div>
