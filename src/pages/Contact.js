@@ -148,7 +148,7 @@ function Contact() {
           </div>
           <div className={styles.mail}>
             <div className={styles.mailTitle}>Reach Out</div>
-            <div className={styles.mailAddress}>pradishbijukchhe@gmail.com</div>
+            <div className={styles.mailAddress}>contact@sandbox.com.np</div>
           </div>
           <div></div>
         </section>

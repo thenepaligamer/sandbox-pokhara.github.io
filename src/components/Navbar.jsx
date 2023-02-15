@@ -80,7 +80,7 @@ function Navbar() {
                   onClick={toggleNav}
                   activeClassName={width >= 935 ? "activeNav" : "passiveNav"}
                 >
-                  Service
+                  Services
                 </NavLink>
               </li>
               <li className={styles.navItem}>
