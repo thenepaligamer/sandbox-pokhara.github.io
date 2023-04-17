@@ -119,13 +119,13 @@ function Home() {
             <div className={styles.expertiseDescription}>
               <h1 className={styles.expertiseTitle}>Expertise</h1>
               <p className={styles.expertiseDetails}>
-                We have expertise in all essential technology and can adapt product to meet users' needs.
+                We have expertise in all the essential technologies and are ready to adapt product to meet users' needs.
               </p>
             </div>
             <div className={styles.expertise}>
               <div>
                 <div className={styles.expertiseReact}>
-                  <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
+                  <a href="https://react.dev/" target="_blank" rel="noreferrer">
                     <img src={ReactLogo} alt="react" title="react" />
                   </a>
                 </div>

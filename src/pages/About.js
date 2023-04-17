@@ -22,10 +22,7 @@ function About() {
             <div className={styles.details}>Who we are!</div>
             <div className={styles.title}>About Us</div>
             <div className={styles.subtitle}>
-              Sandbox is a software development firm comprising of the most talented, dedicated and
-              ambitious pool of engineers with expertise in consulting services and application
-              development for businesses to optimize efficiency and productivity using cutting-edge
-              technologies.
+            Sandbox is a software development firm composed of talented, dedicated, and ambitious engineers with expertise in consulting services and application development. We help businesses optimize their efficiency and productivity using cutting-edge technologies.
             </div>
           </div>
           <div className={styles.imgContainer}>
